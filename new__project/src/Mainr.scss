@@ -1,0 +1,38 @@
+
+
+.main{
+    background-image: url(background_image1.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .header{
+        li{
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+        
+            a{
+                color: black;
+                font-weight: bold;
+                padding: 20px;
+                display: inline-block;
+            }
+        }
+        background-color: rgb(195, 223, 195);
+        padding: 0;
+    }
+// .content{
+//     background-color: rgb(163, 204, 163);
+//     padding:20px;
+//     h2{
+//         padding: 0;
+//         margin: 0;
+//     }
+//     li{
+//         margin-bottom: 10px;
+    // }
+// }
+// .active{
+//     background-color: rgb(214, 230, 240);
+//     }
+}

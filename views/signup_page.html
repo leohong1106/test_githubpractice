@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Nanum+Pen+Script&display=swap" rel="stylesheet"> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>signup_page</title>
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #div {
+            /* border: solid 1px pink; */
+
+            width: 280px;
+            height: 330px;
+            background-color: rgb(250, 250, 255);
+            border: solid 1px pink;
+            text-align: center;
+            border-radius: 20px;
+            opacity: 0.7 !important;
+
+        }
+
+
+        th {
+            font-family: 'Nanum Pen Script', cursive;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #inp {
+            width: 250px;
+            height: 40px;
+            background-color: rgb(255, 255, 170);
+            color: slateblue;
+            font-size: 30px;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        input {
+            width: 150px;
+            height: 20px;
+            font-size: 13px;
+        }
+
+        h2 {
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 35px;
+        }
+    </style>
+
+</head>
+
+<body style="background-image:url('background_image1.jpg');">
+        <% include ./inc/nav.ejs %>
+        <br><br><br>
+    <div id="div" >
+        <form action='/mysql/adduser3' method="POST">
+            <!-- <form action='/signup' method="POST"> -->
+            <br>
+            <table>
+                <tr>
+                    <th> 아이디</th>
+                    <td><input type="text" placeholder="ID를 입력하세요" name="userid" required autofocus></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" placeholder="비밀번호를 입력하세요" name="password" required></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" placeholder="한번 더 입력하세요" name="password2" required></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" placeholder="이름를 입력하세요" name="name" required></td>
+                </tr>
+                <tr>
+                    <th>생일</th>
+                    <td><input type="date" placeholder="생년월일을 입력하세요" name="birth"></td>
+                </tr>
+                <tr>
+                    <th>이메일 주소</th>
+                    <td><input type="email" placeholder="email을 입력하세요" name="email"></td>
+                </tr>
+                <tr>
+                    <th>취미/관심사</th>
+                    <td><input type="text" placeholder="취미를 입력하세요" name="hobby"></td>
+            </table>
+            <hr>
+            <input id="inp" type="submit" value="회원가입하기">
+        </form>
+    </div>
+    <br><br>
+    <div id="txt">
+        <h2>정보검색 사이트에 방문해 주셔서 감사합니다</h2>
+    </div>
+</body>
+
+</html>
